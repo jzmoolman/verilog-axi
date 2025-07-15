@@ -165,6 +165,8 @@ module axi_ram #(
         mem[j+1] = 256'hffffffff;
       end
     end
+    mem[194] = 256'b001; 
+    mem[195] = 256'b010;
   end
 
   always @* begin
