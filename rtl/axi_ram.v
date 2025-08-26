@@ -173,6 +173,9 @@ initial begin
             mem[j] = 0;
         end
     end
+`ifdef MEMFILE_INCLUDED
+    $readmemh("init.mem", mem);
+`endif
 end
 
 always @* begin
